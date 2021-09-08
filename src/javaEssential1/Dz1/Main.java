@@ -7,9 +7,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите длины сторон прямоугольника: ");
         Rectangle rectangle = new Rectangle();
-        double a = scanner.nextDouble();
-        double b = scanner.nextDouble();
-        System.out.println("Площаль прямоугольника: " + rectangle.areaCalculator(a, b));
-        System.out.println("Периметр прямоугольника: " + rectangle.perimeterCalculator(a, b));
+        rectangle.setSide1(scanner.nextDouble());
+        rectangle.setSide2(scanner.nextDouble());
+        System.out.println("Площаль прямоугольника: " + rectangle.areaCalculator(rectangle.getSide1(), rectangle.getSide2()));
+        System.out.println("Периметр прямоугольника: " + rectangle.perimeterCalculator(rectangle.getSide1(), rectangle.getSide2()));
     }
 }
